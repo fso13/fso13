@@ -36,7 +36,7 @@ Java Developer
 ##### Стек:
 
 Java 8,
-ORM EclipseLink JPA, Datanicleus JDO, MyBatis, JDBS,
+ORM EclipseLink JPA, Datanicleus JDO, MyBatis, JDBC,
 Spring framework,
 HTTP, REST, SOAP,
 PostgreSQL, Oracle, MS SQL Service,
