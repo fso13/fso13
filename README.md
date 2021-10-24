@@ -50,3 +50,11 @@ Jenkins,
 Vagrant
 
 Поддержка и разработка продуктовой платформы для рассылки смс, голосовых сообшей и писем. Разработка платформы для интеграции с платежными системами. Разработка серверной системы для мобильного приложения для коллекторского бюро.
+
+
+<!-- If you're using "master" as default branch -->
+![Metrics](https://github.com/fso13/fso13r/blob/master/github-metrics.svg)
+<!-- If you're using "main" as default branch -->
+![Metrics](https://github.comfso13/fso13/blob/main/github-metrics.svg)
+<!-- If you're using the "columns" display mode -->
+<img src="https://github.com/fso13/fso13/blob/master/github-metrics.svg" alt="Metrics" width="100%">
