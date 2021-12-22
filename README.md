@@ -9,13 +9,20 @@
 
 ### Опыт работы:
 
-#### Май 2018 – по настоящее время
+#### ноябрь 2021 – по настоящее время
+Банк Открытие,
+www.open.ru
+Java Developer
+##### Стек:
+Java 8, REST, websocket, ActiveMQ, Tibco, SOAP, Vagrant, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL
+Поддержка и разработка Бизнес портала для клиентов банка Открытие МСБ
+
+#### Май 2018 – ноябрь 2021
 RooX Solutions,
 www.roox.ru
 Java Developer
 ##### Стек:
 Java 8, REST, websocket, ActiveMQ, Tibco, SOAP, Vagrant, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL
-Поддержка и разработка Бизнес портала для клиентов банка Открытие МСБ
 
 #### Май 2013 – Апрель 2018
 5 лет
