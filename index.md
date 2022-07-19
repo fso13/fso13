@@ -14,7 +14,9 @@
 Java Developer, Банк Открытие, www.open.ru
 #### Стек:
 Java 8, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL, REST, websocket, ActiveMQ, Tibco, SOAP, Vagrant
+
 - Поддержка и разработка Бизнес портала для клиентов банка Открытие МСБ
+
 ------
 
 ### Май 2018 – ноябрь 2021
