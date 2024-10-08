@@ -9,9 +9,18 @@
 ------
 ### Опыт работы:
 
-### Ноябрь 2021 – по настоящее время:
+### Февраль 2024 – по настоящее время:
 
-Java Developer, Банк Открытие, www.open.ru
+Lead Backend, РТК ИТ, [www.rtkit.ru](https://rtkit.ru/)
+#### Стек:
+Java 17, Kotlin, Spring 5-6 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL, RabbitMq, Kafka.
+
+- Поддержка и разработка сервисов экосистемы Лукоморье
+------
+
+### Ноябрь 2021 – февраль 2024:
+
+Lead Java Developer, Банк Открытие, www.open.ru
 #### Стек:
 Java 8, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL, REST, websocket, ActiveMQ, Tibco, SOAP, Vagrant
 
