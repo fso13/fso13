@@ -16,6 +16,7 @@ Lead Backend, РТК ИТ, [www.rtkit.ru](https://rtkit.ru/)
 Java 17, Kotlin, Spring 5-6 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL, RabbitMq, Kafka.
 
 - Поддержка и разработка сервисов экосистемы Лукоморье
+
 ------
 
 ### Ноябрь 2021 – февраль 2024:
@@ -29,6 +30,7 @@ Java 8, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL,
 ------
 
 ### Май 2018 – ноябрь 2021
+
 Java Developer, RooX Solutions, www.roox.ru
 #### Стек:
 Java 8, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL, REST, websocket, ActiveMQ, Tibco, SOAP, Vagrant
@@ -36,6 +38,7 @@ Java 8, Spring 5 (Core, Data, Security, Boot, OAuth 2.0), Hibernate, PostgreSQL,
 ------
 
 ### Май 2013 – Апрель 2018
+
 Java Developer, ООО "СИТ Консалтинг", Москва
 #### Стек:
 Java 8, ORM EclipseLink JPA, Datanicleus JDO, MyBatis, JDBC, Spring framework, HTTP, REST, SOAP, PostgreSQL, Oracle, MS SQL Service, JMS, FTP, SMTP, Vaadin 7-8, OSGI Karaf 4, Camel, Gradle, Maven, Git, gitflow, Jenkins, Vagrant
