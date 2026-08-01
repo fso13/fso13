@@ -20,6 +20,7 @@
       <a href="#stack">Стек</a>
       <a href="#education">Образование</a>
       <a href="#contact">Контакты</a>
+      <a href="#tech">Технологии</a>
     </nav>
   </header>
 
@@ -27,10 +28,14 @@
     <section class="hero" aria-label="О разработчике">
       <div class="hero-copy">
         <p class="hero-role">Lead Backend Developer</p>
-        <h1 class="hero-name">Дмитрий Руденко</h1>
+        <h1 class="hero-name" data-text="Дмитрий Руденко">Дмитрий Руденко</h1>
         <p class="hero-lead">
           Руковожу backend-разработкой и проектирую сервисы на Java / Kotlin и Spring.
           Фокус — надёжная архитектура, delivery и развитие команды.
+        </p>
+        <p class="hero-status" aria-live="polite">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="status-text">compiling excuses…</span>
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#experience">Опыт работы</a>
@@ -49,7 +54,8 @@
           <span class="panel-file">PluginOrchestrator.java</span>
           <span class="panel-lang">Java 17</span>
         </div>
-        <pre class="hero-code"><code><span class="c-line"><span class="c-kw">package</span> <span class="c-pkg">ru.rtkit.lukomorye.core</span>;</span>
+        <pre class="hero-code"><code><span class="c-line"><span class="c-cmt">// TODO: hire this lead before next sprint</span></span>
+<span class="c-line"><span class="c-kw">package</span> <span class="c-pkg">ru.rtkit.lukomorye.core</span>;</span>
 <span class="c-line"></span>
 <span class="c-line"><span class="c-ann">@Service</span></span>
 <span class="c-line"><span class="c-kw">public class</span> <span class="c-type">PluginOrchestrator</span> {</span>
@@ -64,7 +70,7 @@
 <span class="c-line"></span>
 <span class="c-line">    <span class="c-kw">var</span> result = plugin.<span class="c-fn">execute</span>(cmd);</span>
 <span class="c-line">    kafka.<span class="c-fn">send</span>(<span class="c-str">"domain.events"</span>, result.<span class="c-fn">toEvent</span>());</span>
-<span class="c-line">    <span class="c-kw">return</span> result;</span>
+<span class="c-line">    <span class="c-kw">return</span> result;<span class="c-cursor"></span></span>
 <span class="c-line">  }</span>
 <span class="c-line">}</span></code></pre>
       </aside>
@@ -83,8 +89,11 @@
             <span class="job-role">Lead Backend</span>
           </div>
           <div class="job-body">
-            <h3>
-              <a href="https://rtkit.ru/" target="_blank" rel="noopener noreferrer">РТК ИТ</a>
+            <h3 class="job-company">
+              <a href="https://rtkit.ru/" target="_blank" rel="noopener noreferrer">
+                <img class="company-logo" src="assets/logos/rtkit-logo.png" alt="" width="28" height="28" loading="lazy" />
+                <span>РТК ИТ</span>
+              </a>
             </h3>
             <p>Поддержка и разработка сервисов экосистемы Лукоморье.</p>
             <ul class="duties">
@@ -115,8 +124,11 @@
             <span class="job-role">Lead Java Developer</span>
           </div>
           <div class="job-body">
-            <h3>
-              <a href="https://www.open.ru" target="_blank" rel="noopener noreferrer">Банк Открытие</a>
+            <h3 class="job-company">
+              <a href="https://www.open.ru" target="_blank" rel="noopener noreferrer">
+                <img class="company-logo company-logo--wide" src="assets/logos/open-logo.svg" alt="" width="120" height="23" loading="lazy" />
+                <span>Банк Открытие</span>
+              </a>
             </h3>
             <p>Поддержка и разработка бизнес-портала для клиентов МСБ.</p>
             <ul class="duties">
@@ -147,8 +159,11 @@
             <span class="job-role">Java Developer</span>
           </div>
           <div class="job-body">
-            <h3>
-              <a href="https://www.roox.ru" target="_blank" rel="noopener noreferrer">RooX Solutions</a>
+            <h3 class="job-company">
+              <a href="https://www.roox.ru" target="_blank" rel="noopener noreferrer">
+                <img class="company-logo" src="assets/logos/roox-logo.png" alt="" width="28" height="28" loading="lazy" />
+                <span>RooX Solutions</span>
+              </a>
             </h3>
             <p>Backend-разработка на Spring-стеке: REST, messaging, интеграции.</p>
             <ul class="chips" aria-label="Стек">
@@ -171,7 +186,12 @@
             <span class="job-role">Java Developer</span>
           </div>
           <div class="job-body">
-            <h3>ООО «СИТ Консалтинг»</h3>
+            <h3 class="job-company">
+              <a href="https://citc.ru" target="_blank" rel="noopener noreferrer">
+                <img class="company-logo company-logo--wide" src="assets/logos/citc-logo.png" alt="" width="120" height="21" loading="lazy" />
+                <span>ООО «СИТ Консалтинг»</span>
+              </a>
+            </h3>
             <ul class="duties">
               <li>Поддержка и разработка платформы рассылки SMS, голосовых сообщений и писем</li>
               <li>Разработка платформы интеграции с платёжными системами</li>
@@ -255,21 +275,147 @@
             <strong>github.com/fso13</strong>
           </a>
         </li>
-        <li>
-          <a href="https://www.instagram.com/drudenko13/" target="_blank" rel="noopener noreferrer">
-            <span>Instagram</span>
-            <strong>@drudenko13</strong>
-          </a>
+      </ul>
+    </section>
+
+    <section id="tech" class="section section-tech" aria-label="Технологии">
+      <div class="section-head">
+        <p class="eyebrow">Toolkit</p>
+        <h2>Технологии и стек</h2>
+      </div>
+      <ul class="tech-icons reveal">
+        <li title="Java">
+          <img src="assets/tech/java.svg" alt="Java" width="32" height="32" loading="lazy" />
+          <span>Java</span>
+        </li>
+        <li title="Kotlin">
+          <img src="assets/tech/kotlin.svg" alt="Kotlin" width="32" height="32" loading="lazy" />
+          <span>Kotlin</span>
+        </li>
+        <li title="Spring">
+          <img src="assets/tech/spring.svg" alt="Spring" width="32" height="32" loading="lazy" />
+          <span>Spring</span>
+        </li>
+        <li title="Hibernate">
+          <img src="assets/tech/hibernate.svg" alt="Hibernate" width="32" height="32" loading="lazy" />
+          <span>Hibernate</span>
+        </li>
+        <li title="PostgreSQL">
+          <img src="assets/tech/postgresql.svg" alt="PostgreSQL" width="32" height="32" loading="lazy" />
+          <span>PostgreSQL</span>
+        </li>
+        <li title="Oracle">
+          <img src="assets/tech/oracle.svg" alt="Oracle" width="32" height="32" loading="lazy" />
+          <span>Oracle</span>
+        </li>
+        <li title="Microsoft SQL Server">
+          <img src="assets/tech/mssql.svg" alt="MS SQL" width="32" height="32" loading="lazy" />
+          <span>MS SQL</span>
+        </li>
+        <li title="Apache Kafka">
+          <img src="assets/tech/kafka.svg" alt="Kafka" width="32" height="32" loading="lazy" />
+          <span>Kafka</span>
+        </li>
+        <li title="RabbitMQ">
+          <img src="assets/tech/rabbitmq.svg" alt="RabbitMQ" width="32" height="32" loading="lazy" />
+          <span>RabbitMQ</span>
+        </li>
+        <li title="Apache ActiveMQ">
+          <img src="assets/tech/activemq.png" alt="ActiveMQ" width="32" height="32" loading="lazy" />
+          <span>ActiveMQ</span>
+        </li>
+        <li title="MyBatis">
+          <img class="tech-logo--dark" src="assets/tech/mybatis.png" alt="MyBatis" width="32" height="32" loading="lazy" />
+          <span>MyBatis</span>
+        </li>
+        <li title="EclipseLink / JPA">
+          <img src="assets/tech/eclipse.svg" alt="EclipseLink" width="32" height="32" loading="lazy" />
+          <span>EclipseLink</span>
+        </li>
+        <li title="Apache Camel">
+          <img src="assets/tech/camel.png" alt="Camel" width="32" height="32" loading="lazy" />
+          <span>Camel</span>
+        </li>
+        <li title="Vaadin">
+          <img src="assets/tech/vaadin.svg" alt="Vaadin" width="32" height="32" loading="lazy" />
+          <span>Vaadin</span>
+        </li>
+        <li title="Apache Karaf / OSGi">
+          <img src="assets/tech/apache.svg" alt="OSGi / Karaf" width="32" height="32" loading="lazy" />
+          <span>OSGi / Karaf</span>
+        </li>
+        <li title="OAuth 2.0">
+          <img src="assets/tech/oauth.svg" alt="OAuth 2.0" width="32" height="32" loading="lazy" />
+          <span>OAuth 2.0</span>
+        </li>
+        <li title="REST / OpenAPI">
+          <img src="assets/tech/rest.svg" alt="REST" width="32" height="32" loading="lazy" />
+          <span>REST</span>
+        </li>
+        <li title="SOAP">
+          <img src="assets/tech/soap.svg" alt="SOAP" width="32" height="32" loading="lazy" />
+          <span>SOAP</span>
+        </li>
+        <li title="WebSocket">
+          <img src="assets/tech/websocket.svg" alt="WebSocket" width="32" height="32" loading="lazy" />
+          <span>WebSocket</span>
+        </li>
+        <li title="Git">
+          <img src="assets/tech/git.svg" alt="Git" width="32" height="32" loading="lazy" />
+          <span>Git</span>
+        </li>
+        <li title="Apache Maven">
+          <img src="assets/tech/maven.svg" alt="Maven" width="32" height="32" loading="lazy" />
+          <span>Maven</span>
+        </li>
+        <li title="Gradle">
+          <img src="assets/tech/gradle.svg" alt="Gradle" width="32" height="32" loading="lazy" />
+          <span>Gradle</span>
+        </li>
+        <li title="Vagrant">
+          <img src="assets/tech/vagrant.svg" alt="Vagrant" width="32" height="32" loading="lazy" />
+          <span>Vagrant</span>
+        </li>
+        <li title="Tibco">
+          <img class="tech-logo--dark" src="assets/tech/tibco.png" alt="Tibco" width="32" height="32" loading="lazy" />
+          <span>Tibco</span>
         </li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Дмитрий Руденко</p>
+    <p>© <span id="year"></span> Дмитрий Руденко · <span class="footer-joke">built with coffee &amp; Kafka</span></p>
     <a href="https://github.com/fso13/fso13" target="_blank" rel="noopener noreferrer">Исходники сайта</a>
   </footer>
 
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div class="fun-layer" aria-hidden="true">
+    <span class="bat b1">🦇</span>
+    <span class="bat b2">🦇</span>
+  </div>
+
+  <div id="pong-modal" class="pong-modal" hidden>
+    <div class="pong-backdrop" data-pong-close></div>
+    <div class="pong-terminal" role="dialog" aria-modal="true" aria-label="Pong terminal">
+      <div class="pong-term-bar">
+        <span class="pong-term-dots" aria-hidden="true"></span>
+        <span class="pong-term-title">root@fso13:~ ./pong --vs-cpu</span>
+        <button type="button" class="pong-term-close" data-pong-close aria-label="Закрыть">×</button>
+      </div>
+      <div class="pong-screen">
+        <div class="pong-labels">
+          <span>Player1</span>
+          <button type="button" id="pong-pause" class="pong-pause">PAUSE</button>
+          <span>CPU</span>
+        </div>
+        <canvas id="pong-canvas" width="720" height="420" aria-label="Pong game"></canvas>
+        <p class="pong-help">W/S или ↑/↓ — ракетка · Space — пауза · Esc — выход</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="pong.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
