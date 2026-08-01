@@ -1,499 +1,277 @@
 <!DOCTYPE html>
-<html lang="RU">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="theme-color" content="#212529"/>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet"/>
-    <!-- minify -->
-    <!-- latest -->
-    <!-- core style only -->
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
-
-    <style>
-        @charset "utf-8";
-        @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
-
-        body {
-            padding: 0 2rem;
-            margin: 0 2rem;
-        }
-
-        #nescss > .container {
-            max-width: 980px;
-            margin: 0 auto;
-            margin-top: 150px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 9;
-            border-bottom: 4px solid #D3D3D3;
-            background-color: white;
-        }
-
-        header > .container {
-            display: flex;
-            align-items: baseline;
-            max-width: 980px;
-            margin: 0 auto;
-            padding-top: 1rem;
-            transition: all 0.2s ease;
-        }
-
-        header > .container > .nav-brand {
-            margin-right: auto;
-        }
-
-        header > .container > .social-button {
-            margin-left: auto;
-        }
-
-        .nav-brand .brand-logo {
-            margin-right: 1rem;
-        }
-
-        .nav-brand > a {
-            color: #212529;
-            text-decoration: none;
-        }
-
-        .social-buttons p {
-            margin-bottom: 0;
-        }
-
-        /* Header-sticky */
-        header.sticky > .container {
-            font-size: 0.8rem;
-            padding: 0;
-            align-items: center;
-        }
-
-        header.sticky .nav-brand h1 {
-            margin: 0;
-        }
-
-        header.sticky .nav-brand p {
-            display: none;
-            margin-bottom: 0;
-            font-size: 0.6rem;
-        }
-
-        /* Main */
-        .main-content {
-            margin-bottom: 4rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        footer a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        h2 > a {
-            margin-right: 1rem;
-        }
-
-        .topic {
-            margin-bottom: 3rem;
-        }
-
-        /* github link */
-        .github-link {
-            position: fixed;
-            top: 100px;
-            right: -240px;
-            z-index: 999;
-            display: flex;
-            height: 100px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .github-link.active {
-            right: 10px;
-        }
-
-        .github-link:hover {
-            text-decoration: none;
-        }
-
-        .github-link > p.nes-balloon {
-            align-self: flex-start;
-            padding: 0.2rem 0.5rem;
-            font-size: 0.8rem;
-            color: #333;
-        }
-
-        .github-link > i.nes-octocat {
-            align-self: flex-end;
-        }
-
-        /* Showcase */
-        section.showcase {
-            margin-top: 2.5rem;
-        }
-
-        section.showcase > section.nes-container {
-            padding-bottom: 2.5rem;
-        }
-
-        section.showcase > section.nes-container,
-        section.showcase > section.samplecode {
-            position: relative;
-        }
-
-        .nes-btn.showcode {
-            position: absolute;
-            font-size: 12px;
-            bottom: 0px;
-            right: -4px;
-        }
-
-        .nes-btn.copycode {
-            position: absolute;
-            font-size: 12px;
-            top: 0;
-            right: 0px;
-        }
-
-        section.showcase > section.samplecode > pre code {
-            font-size: 13px;
-            line-height: 1.5;
-            padding: 1.5rem;
-        }
-
-        .item {
-            margin-bottom: -1rem;
-        }
-
-        .item > * {
-            margin-bottom: 1.5rem !important;
-        }
-
-        /* Containers */
-        .item.containers > .nes-container {
-            display: inline-block;
-            max-width: 400px;
-        }
-
-        /* Balloons sample */
-        section.message-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .message-list > .message {
-            display: flex;
-            margin-top: 2rem;
-        }
-
-        .message-list > .message > .nes-balloon {
-            max-width: 550px;
-        }
-
-        .message-list > .message i {
-            align-self: flex-end;
-        }
-
-        .message-list > .message.-left {
-            align-self: flex-start;
-        }
-
-        .message-list > .message.-right {
-            align-self: flex-end;
-        }
-
-        .message-list > .message.-left i {
-            margin-right: 2rem;
-        }
-
-        .message-list > .message.-right i {
-            margin-left: 2rem;
-        }
-
-        .icon-list > .blur-filter {
-            filter: blur(10px);
-        }
-
-        /* Copied balloon */
-        .nes-balloon.copied-balloon {
-            position: absolute;
-            display: none;
-            padding: 1rem;
-            box-shadow: 0 5px 20px 5px rgba(0, 0, 0, .6);
-            z-index: 1;
-        }
-
-        /* Topic */
-        h3.topic-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        h3.topic-title > i {
-            margin-right: 1.5rem;
-        }
-
-        /* coreteam */
-        .coreteam-members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .nes-container.member-card {
-            display: flex;
-            padding: 1rem 1.5rem;
-            width: 470px;
-            margin-bottom: 2rem;
-        }
-
-        .member-card .avatar > img {
-            display: block;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-        }
-
-        .member-card > .profile {
-            margin-left: 1.5rem;
-        }
-
-        .member-card > .profile > .name {
-            font-size: 20px;
-        }
-
-        /* Contributors */
-        .contributor {
-            display: inline-block;
-            margin: 1rem;
-            text-align: center;
-            width: 160px;
-        }
-
-        .contributor > p {
-            margin: .5rem;
-            font-size: 12px;
-        }
-
-        .contributor img.nes-avatar {
-            transition: all .4s;
-            display: inline-block;
-        }
-
-        .contributor:hover {
-            text-decoration: none;
-            opacity: 0.7;
-        }
-
-        /* Articles */
-        .article-link > .title a {
-            color: #333;
-        }
-
-        .article-link > .title span {
-            margin-left: 1rem;
-        }
-
-        /* Scroll back to top */
-        .scroll-btn {
-            position: fixed;
-            bottom: -60px;
-            right: 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, .6);
-            transition: all 0.3s ease;
-        }
-
-        .scroll-btn.active {
-            bottom: 25px;
-        }
-
-        .scroll-btn > span {
-            display: block;
-            transform: rotateZ(90deg);
-        }
-
-        img.lazy {
-            background-color: #D3D3D3;
-        }
-
-        @media screen and (max-width: calc(980px - 4rem)) {
-            header > .container {
-                margin: 0 4rem;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            body {
-                margin: 2rem 0.5rem;
-                padding: 0;
-            }
-
-            header > .container {
-                margin: 0 0.5rem;
-            }
-
-            .github-link {
-                display: none;
-            }
-
-            .message-list > .message > .nes-balloon {
-                max-width: 60%;
-            }
-        }
-
-        @media screen and (max-width: 580px) {
-            #nescss > .container {
-                margin-top: 190px;
-            }
-        }
-
-        body {
-            padding: 0 2rem;
-            margin: 0 2rem;
-        }
-
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            margin-top: 0px;
-            margin-top: 150px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Дмитрий Руденко — Lead Backend Developer. Java, Kotlin, Spring, PostgreSQL, Kafka." />
+  <meta name="theme-color" content="#e7eef2" />
+  <title>Дмитрий Руденко — Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-<div>
-    <header :class="{ sticky: scrollPos > 50 }">
-        <div class="container">
-            <div class="nav-brand">
-                <H2>Руденко Дмитрий</H2>
-            </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">fso13</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#experience">Опыт</a>
+      <a href="#stack">Стек</a>
+      <a href="#education">Образование</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="О разработчике">
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-diagram" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0b6e6a" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#b7791f" stop-opacity="0.55" />
+            </linearGradient>
+          </defs>
+          <g class="grid-lines" stroke="url(#lineGrad)" stroke-width="1.2" opacity="0.55">
+            <path d="M80 120 H360 V280 H560" />
+            <path d="M560 280 V420 H780" />
+            <path d="M360 280 V520 H200" />
+            <path d="M560 160 H820 V300" />
+            <path d="M200 520 V640 H480 V420" />
+            <path d="M780 420 V560 H640" />
+          </g>
+          <g class="nodes">
+            <rect class="node n1" x="60" y="90" width="120" height="56" rx="4" />
+            <rect class="node n2" x="300" y="250" width="140" height="56" rx="4" />
+            <rect class="node n3" x="500" y="390" width="130" height="56" rx="4" />
+            <rect class="node n4" x="760" y="130" width="120" height="56" rx="4" />
+            <rect class="node n5" x="160" y="490" width="120" height="56" rx="4" />
+            <rect class="node n6" x="720" y="530" width="120" height="56" rx="4" />
+          </g>
+          <g class="node-labels" fill="#1d3a38" font-family="IBM Plex Mono, monospace" font-size="13">
+            <text x="78" y="124">API</text>
+            <text x="322" y="284">SERVICE</text>
+            <text x="522" y="424">QUEUE</text>
+            <text x="778" y="164">AUTH</text>
+            <text x="178" y="524">DB</text>
+            <text x="738" y="564">STREAM</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-copy">
+        <p class="hero-role">Lead Backend Developer</p>
+        <h1 class="hero-name">Дмитрий<br />Руденко</h1>
+        <p class="hero-lead">
+          Проектирую и развиваю backend-сервисы на Java и Kotlin: от интеграций до высоконагруженных экосистем.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#experience">Смотреть опыт</a>
+          <a class="btn btn-ghost" href="mailto:dimarudenk@gmail.com">Написать</a>
         </div>
-    </header>
-</div>
-<div class="container">
+      </div>
+    </section>
 
-    <main class="main-content">
-        <section class="showcase">
-            <div class="container">
-                <h3 class="topic-title"><i class="nes-icon star"></i>Образование</h3>
-                <div class="with-title">
-            <span class="nes-text">
-                Высшее 2006 – 2011 Государственное образовательное учреждение высшего профессионального образования - Волгоградский государственный технический университет Автоматизированные системы обработки информации и управления
-            </span>
-                </div>
-            </div>
-        </section>
+    <section id="experience" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Карьера</p>
+        <h2>Опыт работы</h2>
+      </div>
 
-        <section class="showcase">
-            <h3 class="topic-title showcase"><i class="nes-icon star"></i>Опыт работы</h3>
-        </section>
+      <ol class="timeline">
+        <li class="job reveal">
+          <div class="job-meta">
+            <time datetime="2024-02">Февраль 2024 — н.в.</time>
+            <span class="job-role">Lead Backend</span>
+          </div>
+          <div class="job-body">
+            <h3>
+              <a href="https://rtkit.ru/" target="_blank" rel="noopener noreferrer">РТК ИТ</a>
+            </h3>
+            <p>Поддержка и разработка сервисов экосистемы Лукоморье.</p>
+            <ul class="duties">
+              <li>Управление backend-командой: постановка целей, распределение нагрузки, 1:1 и развитие людей</li>
+              <li>Синхронизация с продукт-оунерами и смежными командами, согласование приоритетов и сроков</li>
+              <li>Планирование релизов, контроль delivery и прозрачная отчётность по статусу работ</li>
+              <li>Найм и онбординг разработчиков, формирование компетенций и зоны ответственности в команде</li>
+              <li>Выстраивание процессов разработки: код-ревью, DoD, ритуалы спринта, качество поставки</li>
+              <li>Проектирование и разработка системы плагинов для расширения экосистемы без изменения ядра</li>
+              <li>Определение контрактов плагинов, жизненного цикла подключения и изоляции расширений</li>
+            </ul>
+            <ul class="chips" aria-label="Стек">
+              <li>Java 17</li>
+              <li>Kotlin</li>
+              <li>Spring 5–6</li>
+              <li>Hibernate</li>
+              <li>PostgreSQL</li>
+              <li>RabbitMQ</li>
+              <li>Kafka</li>
+              <li>OAuth 2.0</li>
+            </ul>
+          </div>
+        </li>
 
-        <section class="showcase">
-            <section class="nes-container with-title">
-                <h3 class="title">RooX Solutions</h3>
-                <div class="item">
-                    <section class="icon-list">
-                        <span class="nes-text nes-field is-inline">
-                             Java Developer
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                             Май 2018 – по настоящее время
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                            Стек:
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                            <ul class="nes-list is-disc">
-                                <li>Java 8</li>
-                                <li>Spring 5 (Core, Data, Security, Boot, OAuth 2.0)</li>
-                                <li>Hibernate</li>
-                                <li>PostgreSQL</li>
-                                <li>ActiveMQ</li>
-                                <li>Tibco</li>
-                                <li>REST</li>
-                                <li>SOAP</li>
-                                <li>Vagrant</li>
-                                <li>websocket</li>
-                              </ul>
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                             Поддержка и разработка Бизнес портала для клиентов банка Открытие МСБ
-                        </span>
-                    </section>
-                </div>
-            </section>
-        </section>
+        <li class="job reveal">
+          <div class="job-meta">
+            <time datetime="2021-11">Ноябрь 2021 — февраль 2024</time>
+            <span class="job-role">Lead Java Developer</span>
+          </div>
+          <div class="job-body">
+            <h3>
+              <a href="https://www.open.ru" target="_blank" rel="noopener noreferrer">Банк Открытие</a>
+            </h3>
+            <p>Поддержка и разработка бизнес-портала для клиентов МСБ.</p>
+            <ul class="duties">
+              <li>Архитектурные решения и декомпозиция задач по backend-сервисам портала</li>
+              <li>Код-ревью, менторинг команды и контроль качества кода</li>
+              <li>Планирование спринтов, оценка сроков и приоритизация бэклога с бизнесом</li>
+              <li>Проектирование интеграций (REST, SOAP, messaging) и согласование контрактов API</li>
+              <li>Разбор инцидентов в проде, анализ узких мест и оптимизация производительности</li>
+              <li>Онбординг разработчиков и выравнивание практик команды (Gitflow, CI, стандарты кода)</li>
+            </ul>
+            <ul class="chips" aria-label="Стек">
+              <li>Java 8</li>
+              <li>Spring 5</li>
+              <li>Hibernate</li>
+              <li>PostgreSQL</li>
+              <li>REST</li>
+              <li>WebSocket</li>
+              <li>ActiveMQ</li>
+              <li>Tibco</li>
+              <li>SOAP</li>
+            </ul>
+          </div>
+        </li>
 
-        <section class="showcase">
-            <section class="nes-container with-title">
-                <h3 class="title">ООО "СИТ Консалтинг"</h3>
-                <div class="item">
-                    <section class="icon-list">
-                        <span class="nes-text nes-field is-inline">
-                             Java Developer
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                             Май 2013 – Апрель 2018
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                            Стек:
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                            <ul class="nes-list is-disc">
-                                <li>Java 6-8</li>
-                                <li>Spring 3-5</li>
-                                <li>Datanicleus JDO</li>
-                                <li>ORM EclipseLink JPA</li>
-                                <li>Hibernate</li>
-                                <li>MyBatis</li>
-                                <li>JDBC</li>
-                                <li>REST</li>
-                                <li>SOAP</li>
-                                <li>PostgreSQL</li>
-                                <li>Oracle</li>
-                                <li>MS SQL</li>
-                                <li>ActiveMQ</li>
-                                <li>JMS</li>
-                                <li>FTP</li>
-                                <li>SMTP</li>
-                                <li>Vaadin</li>
-                                <li>OSGI</li>
-                                <li>Camel</li>
-                                <li>Gradle, Maven, Git, Jenkins, Vagrant</li>
-                              </ul>
-                        </span>
-                        <span class="nes-text nes-field is-inline">
-                             Поддержка и разработка продуктовой платформы для рассылки смс, голосовых сообшей и писем. Разработка платформы для интеграции с платежными системами. Разработка серверной системы для мобильного приложения для коллекторского бюро.
-                        </span>
-                    </section>
-                </div>
-            </section>
-        </section>
+        <li class="job reveal">
+          <div class="job-meta">
+            <time datetime="2018-05">Май 2018 — ноябрь 2021</time>
+            <span class="job-role">Java Developer</span>
+          </div>
+          <div class="job-body">
+            <h3>
+              <a href="https://www.roox.ru" target="_blank" rel="noopener noreferrer">RooX Solutions</a>
+            </h3>
+            <p>Backend-разработка на Spring-стеке: REST, messaging, интеграции.</p>
+            <ul class="chips" aria-label="Стек">
+              <li>Java 8</li>
+              <li>Spring 5</li>
+              <li>Hibernate</li>
+              <li>PostgreSQL</li>
+              <li>REST</li>
+              <li>WebSocket</li>
+              <li>ActiveMQ</li>
+              <li>SOAP</li>
+              <li>Vagrant</li>
+            </ul>
+          </div>
+        </li>
 
-        <section class="icon-list">
-            <!-- instagram -->
-            <a href="https://www.instagram.com/drudenko13/"> <i class="nes-icon instagram is-large"></i></a>
-            <!-- github -->
-            <a href="https://github.com/fso13"><i class="nes-icon github is-large"></i></a>
-            <!-- gmail -->
-            <a href="mailto:dimarudenk@gmail.com"><i class="nes-icon gmail is-large"></i></a>
-        </section>
-    </main>
-</div>
+        <li class="job reveal">
+          <div class="job-meta">
+            <time datetime="2013-05">Май 2013 — апрель 2018</time>
+            <span class="job-role">Java Developer</span>
+          </div>
+          <div class="job-body">
+            <h3>ООО «СИТ Консалтинг»</h3>
+            <ul class="duties">
+              <li>Поддержка и разработка платформы рассылки SMS, голосовых сообщений и писем</li>
+              <li>Разработка платформы интеграции с платёжными системами</li>
+              <li>Серверная система для мобильного приложения коллекторского бюро</li>
+            </ul>
+            <ul class="chips" aria-label="Стек">
+              <li>Java 8</li>
+              <li>Spring</li>
+              <li>EclipseLink</li>
+              <li>MyBatis</li>
+              <li>PostgreSQL</li>
+              <li>Oracle</li>
+              <li>MS SQL</li>
+              <li>Vaadin</li>
+              <li>OSGi / Karaf</li>
+              <li>Camel</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="stack" class="section section-stack">
+      <div class="section-head">
+        <p class="eyebrow">Инструменты</p>
+        <h2>Основной стек</h2>
+        <p class="section-lead">То, с чем работаю ежедневно как Lead Backend.</p>
+      </div>
+      <ul class="stack-grid reveal">
+        <li><span>Languages</span><strong>Java 17 · Kotlin</strong></li>
+        <li><span>Framework</span><strong>Spring Boot / Security / Data</strong></li>
+        <li><span>Data</span><strong>PostgreSQL · Hibernate</strong></li>
+        <li><span>Messaging</span><strong>Kafka · RabbitMQ</strong></li>
+        <li><span>API</span><strong>REST · OAuth 2.0</strong></li>
+        <li><span>Delivery</span><strong>Git · Maven / Gradle</strong></li>
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-head">
+        <p class="eyebrow">База</p>
+        <h2>Образование</h2>
+      </div>
+      <article class="education reveal">
+        <time datetime="2006/2011">2006 — 2011</time>
+        <div>
+          <h3>Волгоградский государственный технический университет</h3>
+          <p>Автоматизированные системы обработки информации и управления</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="metrics" class="section section-metrics">
+      <div class="section-head">
+        <p class="eyebrow">GitHub</p>
+        <h2>Активность</h2>
+      </div>
+      <figure class="metrics reveal">
+        <img src="github-metrics.svg" alt="Метрики активности на GitHub" width="480" height="367" loading="lazy" />
+      </figure>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="section-head">
+        <p class="eyebrow">Связь</p>
+        <h2>Контакты</h2>
+        <p class="section-lead">Открыт к интересным backend-задачам и сотрудничеству.</p>
+      </div>
+      <ul class="contacts reveal">
+        <li>
+          <a href="mailto:dimarudenk@gmail.com">
+            <span>Email</span>
+            <strong>dimarudenk@gmail.com</strong>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/fso13" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/fso13</strong>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/drudenko13/" target="_blank" rel="noopener noreferrer">
+            <span>Instagram</span>
+            <strong>@drudenko13</strong>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Дмитрий Руденко</p>
+    <a href="https://github.com/fso13/fso13" target="_blank" rel="noopener noreferrer">Исходники сайта</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>
