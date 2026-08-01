@@ -36,6 +36,7 @@
   --current: #44475a;
   --ink: #f8f8f2;
   --muted: #6272a4;
+  --muted-bright: #c7cce0;
   --comment: #6272a4;
   --accent: #bd93f9;
   --accent-pink: #ff79c6;
@@ -496,13 +497,13 @@ img {
 
 .job-body > p {
   margin: 0 0 0.85rem;
-  color: var(--muted);
+  color: var(--muted-bright);
 }
 
 .duties {
   margin: 0 0 1rem;
   padding-left: 1.15rem;
-  color: var(--muted);
+  color: var(--muted-bright);
 }
 
 .duties li + li {
