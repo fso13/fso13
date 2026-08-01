@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Дмитрий Руденко — Lead Backend Developer. Java, Kotlin, Spring, PostgreSQL, Kafka." />
-  <meta name="theme-color" content="#e7eef2" />
+  <meta name="theme-color" content="#f7f8fa" />
   <title>Дмитрий Руденко — Backend Developer</title>
+  <link rel="preconnect" href="https://resources.jetbrains.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-
   <header class="site-header">
-    <a class="logo" href="#top">fso13</a>
+    <a class="logo" href="#top">Д. Руденко</a>
     <nav class="nav" aria-label="Основная навигация">
       <a href="#experience">Опыт</a>
       <a href="#stack">Стек</a>
@@ -26,64 +25,61 @@
 
   <main id="top">
     <section class="hero" aria-label="О разработчике">
-      <div class="hero-visual" aria-hidden="true">
-        <svg class="hero-diagram" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#0b6e6a" stop-opacity="0.85" />
-              <stop offset="100%" stop-color="#b7791f" stop-opacity="0.55" />
-            </linearGradient>
-          </defs>
-          <g class="grid-lines" stroke="url(#lineGrad)" stroke-width="1.2" opacity="0.55">
-            <path d="M80 120 H360 V280 H560" />
-            <path d="M560 280 V420 H780" />
-            <path d="M360 280 V520 H200" />
-            <path d="M560 160 H820 V300" />
-            <path d="M200 520 V640 H480 V420" />
-            <path d="M780 420 V560 H640" />
-          </g>
-          <g class="nodes">
-            <rect class="node n1" x="60" y="90" width="120" height="56" rx="4" />
-            <rect class="node n2" x="300" y="250" width="140" height="56" rx="4" />
-            <rect class="node n3" x="500" y="390" width="130" height="56" rx="4" />
-            <rect class="node n4" x="760" y="130" width="120" height="56" rx="4" />
-            <rect class="node n5" x="160" y="490" width="120" height="56" rx="4" />
-            <rect class="node n6" x="720" y="530" width="120" height="56" rx="4" />
-          </g>
-          <g class="node-labels" fill="#1d3a38" font-family="IBM Plex Mono, monospace" font-size="13">
-            <text x="78" y="124">API</text>
-            <text x="322" y="284">SERVICE</text>
-            <text x="522" y="424">QUEUE</text>
-            <text x="778" y="164">AUTH</text>
-            <text x="178" y="524">DB</text>
-            <text x="738" y="564">STREAM</text>
-          </g>
-        </svg>
-      </div>
-
       <div class="hero-copy">
         <p class="hero-role">Lead Backend Developer</p>
-        <h1 class="hero-name">Дмитрий<br />Руденко</h1>
+        <h1 class="hero-name">Дмитрий Руденко</h1>
         <p class="hero-lead">
-          Проектирую и развиваю backend-сервисы на Java и Kotlin: от интеграций до высоконагруженных экосистем.
+          Руковожу backend-разработкой и проектирую сервисы на Java / Kotlin и Spring.
+          Фокус — надёжная архитектура, delivery и развитие команды.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#experience">Смотреть опыт</a>
-          <a class="btn btn-ghost" href="mailto:dimarudenk@gmail.com">Написать</a>
+          <a class="btn btn-primary" href="#experience">Опыт работы</a>
+          <a class="btn btn-ghost" href="mailto:dimarudenk@gmail.com">Связаться</a>
         </div>
+        <ul class="hero-meta">
+          <li><span>Специализация</span><strong>Java · Kotlin · Spring</strong></li>
+          <li><span>Роль</span><strong>Lead Backend</strong></li>
+          <li><span>Локация</span><strong>Россия · Remote</strong></li>
+        </ul>
       </div>
+
+      <aside class="hero-panel" aria-hidden="true">
+        <div class="panel-bar">
+          <span class="panel-dots"></span>
+          <span class="panel-file">PluginOrchestrator.java</span>
+          <span class="panel-lang">Java 17</span>
+        </div>
+        <pre class="hero-code"><code><span class="c-line"><span class="c-kw">package</span> <span class="c-pkg">ru.rtkit.lukomorye.core</span>;</span>
+<span class="c-line"></span>
+<span class="c-line"><span class="c-ann">@Service</span></span>
+<span class="c-line"><span class="c-kw">public class</span> <span class="c-type">PluginOrchestrator</span> {</span>
+<span class="c-line"></span>
+<span class="c-line">  <span class="c-kw">private final</span> <span class="c-type">PluginRegistry</span>&lt;<span class="c-type">ExtensionPoint</span>, <span class="c-type">String</span>&gt; registry;</span>
+<span class="c-line">  <span class="c-kw">private final</span> <span class="c-type">KafkaTemplate</span>&lt;<span class="c-type">String</span>, <span class="c-type">Event</span>&gt; kafka;</span>
+<span class="c-line"></span>
+<span class="c-line">  <span class="c-ann">@Transactional</span></span>
+<span class="c-line">  <span class="c-kw">public</span> <span class="c-type">Result</span> <span class="c-fn">dispatch</span>(<span class="c-type">Command</span> cmd) {</span>
+<span class="c-line">    <span class="c-kw">var</span> plugin = registry.<span class="c-fn">getPluginFor</span>(cmd.<span class="c-fn">type</span>())</span>
+<span class="c-line">        .<span class="c-fn">orElseThrow</span>(<span class="c-type">PluginNotFoundException</span>::<span class="c-kw">new</span>);</span>
+<span class="c-line"></span>
+<span class="c-line">    <span class="c-kw">var</span> result = plugin.<span class="c-fn">execute</span>(cmd);</span>
+<span class="c-line">    kafka.<span class="c-fn">send</span>(<span class="c-str">"domain.events"</span>, result.<span class="c-fn">toEvent</span>());</span>
+<span class="c-line">    <span class="c-kw">return</span> result;</span>
+<span class="c-line">  }</span>
+<span class="c-line">}</span></code></pre>
+      </aside>
     </section>
 
     <section id="experience" class="section">
       <div class="section-head">
-        <p class="eyebrow">Карьера</p>
+        <p class="eyebrow">Experience</p>
         <h2>Опыт работы</h2>
       </div>
 
       <ol class="timeline">
         <li class="job reveal">
           <div class="job-meta">
-            <time datetime="2024-02">Февраль 2024 — н.в.</time>
+            <time datetime="2024-02">Фев 2024 — н.в.</time>
             <span class="job-role">Lead Backend</span>
           </div>
           <div class="job-body">
@@ -115,7 +111,7 @@
 
         <li class="job reveal">
           <div class="job-meta">
-            <time datetime="2021-11">Ноябрь 2021 — февраль 2024</time>
+            <time datetime="2021-11">Ноя 2021 — фев 2024</time>
             <span class="job-role">Lead Java Developer</span>
           </div>
           <div class="job-body">
@@ -147,7 +143,7 @@
 
         <li class="job reveal">
           <div class="job-meta">
-            <time datetime="2018-05">Май 2018 — ноябрь 2021</time>
+            <time datetime="2018-05">Май 2018 — ноя 2021</time>
             <span class="job-role">Java Developer</span>
           </div>
           <div class="job-body">
@@ -171,7 +167,7 @@
 
         <li class="job reveal">
           <div class="job-meta">
-            <time datetime="2013-05">Май 2013 — апрель 2018</time>
+            <time datetime="2013-05">Май 2013 — апр 2018</time>
             <span class="job-role">Java Developer</span>
           </div>
           <div class="job-body">
@@ -199,24 +195,26 @@
     </section>
 
     <section id="stack" class="section section-stack">
-      <div class="section-head">
-        <p class="eyebrow">Инструменты</p>
-        <h2>Основной стек</h2>
-        <p class="section-lead">То, с чем работаю ежедневно как Lead Backend.</p>
+      <div class="section-inner">
+        <div class="section-head">
+          <p class="eyebrow">Tech stack</p>
+          <h2>Основной стек</h2>
+          <p class="section-lead">Инструменты ежедневной работы в роли Lead Backend.</p>
+        </div>
+        <ul class="stack-grid reveal">
+          <li><span>Languages</span><strong>Java 17 · Kotlin</strong></li>
+          <li><span>Framework</span><strong>Spring Boot / Security / Data</strong></li>
+          <li><span>Data</span><strong>PostgreSQL · Hibernate</strong></li>
+          <li><span>Messaging</span><strong>Kafka · RabbitMQ</strong></li>
+          <li><span>API</span><strong>REST · OAuth 2.0</strong></li>
+          <li><span>Delivery</span><strong>Git · Maven / Gradle</strong></li>
+        </ul>
       </div>
-      <ul class="stack-grid reveal">
-        <li><span>Languages</span><strong>Java 17 · Kotlin</strong></li>
-        <li><span>Framework</span><strong>Spring Boot / Security / Data</strong></li>
-        <li><span>Data</span><strong>PostgreSQL · Hibernate</strong></li>
-        <li><span>Messaging</span><strong>Kafka · RabbitMQ</strong></li>
-        <li><span>API</span><strong>REST · OAuth 2.0</strong></li>
-        <li><span>Delivery</span><strong>Git · Maven / Gradle</strong></li>
-      </ul>
     </section>
 
     <section id="education" class="section">
       <div class="section-head">
-        <p class="eyebrow">База</p>
+        <p class="eyebrow">Education</p>
         <h2>Образование</h2>
       </div>
       <article class="education reveal">
@@ -240,9 +238,9 @@
 
     <section id="contact" class="section section-contact">
       <div class="section-head">
-        <p class="eyebrow">Связь</p>
+        <p class="eyebrow">Contact</p>
         <h2>Контакты</h2>
-        <p class="section-lead">Открыт к интересным backend-задачам и сотрудничеству.</p>
+        <p class="section-lead">Открыт к обсуждению интересных backend-задач и сотрудничества.</p>
       </div>
       <ul class="contacts reveal">
         <li>
