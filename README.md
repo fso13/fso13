@@ -59,7 +59,7 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 - Реализация нового функционала для собственного продукта SSO
 - Участие в разработке системы ДБО
 
-**Стек:** Java 8, Spring 5, Hibernate, PostgreSQL, REST, WebSocket, ActiveMQ, SOAP, Vagrant
+**Стек:** Java 8, Spring 5, Quarkus, Micronaut, Hibernate, PostgreSQL, REST, WebSocket, ActiveMQ, SOAP, Vagrant
 
 ---
 
@@ -74,7 +74,7 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 - Разработка интеграции с Яндекс Такси
 - Разработка системы предотвращения нелегальных поездок таксистов
 
-**Стек:** Java 8, Spring, Spring Dynamic Modules, Blueprint, EclipseLink, JDO, DataNucleus, MyBatis, JDBC, PostgreSQL, Oracle, MS SQL, Apache Drools, SOAP, JMS, WebSocket, ActiveMQ, OpenMQ, Vaadin, OSGi / Karaf, Camel
+**Стек:** Java 8, Spring, Spring Dynamic Modules, Blueprint, EclipseLink, JDO, DataNucleus, MyBatis, JDBC, PostgreSQL, Oracle, MS SQL, Apache Drools, SOAP, JMS, WebSocket, ActiveMQ, OpenMQ, Vaadin, OSGi / Karaf, Camel, Guice
 
 ---
 
@@ -83,10 +83,12 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 | Направление | Технологии |
 |---|---|
 | Languages | Java 17 · Kotlin |
-| Framework | Spring Boot / Security / Data |
-| Data | PostgreSQL · Hibernate |
+| Framework | Spring Boot / Security / Data · Quarkus · Micronaut |
+| Data | PostgreSQL · Hibernate · Redis · Hazelcast · Elasticsearch |
 | Messaging | Kafka · RabbitMQ |
 | API | REST · OAuth 2.0 |
+| Infra | Docker · Kubernetes · Helm · Vault · Argo CD |
+| Observability | Grafana · Kibana |
 | Delivery | Git · Maven / Gradle |
 
 ---
@@ -115,4 +117,26 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 
 ## Технологии и стек
 
-Java · Kotlin · Spring · Hibernate · PostgreSQL · Oracle · MS SQL · Kafka · RabbitMQ · ActiveMQ · OpenMQ · JMS · MyBatis · JDO · DataNucleus · JDBC · EclipseLink · Drools · Camel · Vaadin · OSGi / Karaf · Spring DM · Blueprint · OAuth 2.0 · REST · SOAP · WebSocket · Git · Maven · Gradle · Vagrant · Tibco
+### Языки
+Java · Kotlin
+
+### Фреймворки и DI
+Spring · Quarkus · Micronaut · Guice · Spring DM · Blueprint · OSGi / Karaf · Vaadin
+
+### Базы данных и ORM
+Hibernate · PostgreSQL · Oracle · MS SQL · MyBatis · JDO · DataNucleus · JDBC · EclipseLink · Redis · Hazelcast · Elasticsearch
+
+### Очереди и messaging
+Kafka · RabbitMQ · ActiveMQ · OpenMQ · JMS · Tibco
+
+### API и интеграции
+REST · SOAP · WebSocket · OAuth 2.0 · Camel · Drools
+
+### Инфраструктура и DevOps
+Docker · Kubernetes · Helm · Argo CD · Vault
+
+### Мониторинг и визуализация
+Grafana · Kibana
+
+### Инструменты и delivery
+Git · Maven · Gradle · Vagrant

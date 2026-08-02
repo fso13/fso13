@@ -187,6 +187,8 @@
             <ul class="chips" aria-label="Стек">
               <li>Java 8</li>
               <li>Spring 5</li>
+              <li>Quarkus</li>
+              <li>Micronaut</li>
               <li>Hibernate</li>
               <li>PostgreSQL</li>
               <li>REST</li>
@@ -240,6 +242,7 @@
               <li>Vaadin</li>
               <li>OSGi / Karaf</li>
               <li>Camel</li>
+              <li>Guice</li>
             </ul>
           </div>
         </li>
@@ -255,11 +258,13 @@
         </div>
         <ul class="stack-grid reveal">
           <li><span>Languages</span><strong>Java 17 · Kotlin</strong></li>
-          <li><span>Framework</span><strong>Spring Boot / Security / Data</strong></li>
-          <li><span>Data</span><strong>PostgreSQL · Hibernate</strong></li>
+          <li><span>Framework</span><strong>Spring · Quarkus · Micronaut</strong></li>
+          <li><span>Data</span><strong>PostgreSQL · Redis · Hazelcast</strong></li>
           <li><span>Messaging</span><strong>Kafka · RabbitMQ</strong></li>
           <li><span>API</span><strong>REST · OAuth 2.0</strong></li>
-          <li><span>Delivery</span><strong>Git · Maven / Gradle</strong></li>
+          <li><span>Infra</span><strong>Docker · K8s · Helm · Vault</strong></li>
+          <li><span>Delivery</span><strong>Git · Maven / Gradle · Argo CD</strong></li>
+          <li><span>Observability</span><strong>Grafana · Kibana · Elastic</strong></li>
         </ul>
       </div>
     </section>
@@ -344,136 +349,101 @@
         <p class="eyebrow">Toolkit</p>
         <h2>Технологии и стек</h2>
       </div>
-      <ul class="tech-icons reveal">
-        <li title="Java">
-          <img src="assets/tech/java.svg" alt="Java" width="32" height="32" loading="lazy" />
-          <span>Java</span>
-        </li>
-        <li title="Kotlin">
-          <img src="assets/tech/kotlin.svg" alt="Kotlin" width="32" height="32" loading="lazy" />
-          <span>Kotlin</span>
-        </li>
-        <li title="Spring">
-          <img src="assets/tech/spring.svg" alt="Spring" width="32" height="32" loading="lazy" />
-          <span>Spring</span>
-        </li>
-        <li title="Hibernate">
-          <img src="assets/tech/hibernate.svg" alt="Hibernate" width="32" height="32" loading="lazy" />
-          <span>Hibernate</span>
-        </li>
-        <li title="PostgreSQL">
-          <img src="assets/tech/postgresql.svg" alt="PostgreSQL" width="32" height="32" loading="lazy" />
-          <span>PostgreSQL</span>
-        </li>
-        <li title="Oracle">
-          <img src="assets/tech/oracle.svg" alt="Oracle" width="32" height="32" loading="lazy" />
-          <span>Oracle</span>
-        </li>
-        <li title="Microsoft SQL Server">
-          <img src="assets/tech/mssql.svg" alt="MS SQL" width="32" height="32" loading="lazy" />
-          <span>MS SQL</span>
-        </li>
-        <li title="Apache Kafka">
-          <img src="assets/tech/kafka.svg" alt="Kafka" width="32" height="32" loading="lazy" />
-          <span>Kafka</span>
-        </li>
-        <li title="RabbitMQ">
-          <img src="assets/tech/rabbitmq.svg" alt="RabbitMQ" width="32" height="32" loading="lazy" />
-          <span>RabbitMQ</span>
-        </li>
-        <li title="Apache ActiveMQ">
-          <img src="assets/tech/activemq.png" alt="ActiveMQ" width="32" height="32" loading="lazy" />
-          <span>ActiveMQ</span>
-        </li>
-        <li title="OpenMQ">
-          <img src="assets/tech/openmq.svg" alt="OpenMQ" width="32" height="32" loading="lazy" />
-          <span>OpenMQ</span>
-        </li>
-        <li title="JMS">
-          <img src="assets/tech/jms.png" alt="JMS" width="32" height="32" loading="lazy" />
-          <span>JMS</span>
-        </li>
-        <li title="MyBatis">
-          <img class="tech-logo--dark" src="assets/tech/mybatis.png" alt="MyBatis" width="32" height="32" loading="lazy" />
-          <span>MyBatis</span>
-        </li>
-        <li title="JDO">
-          <img src="assets/tech/jdo.png" alt="JDO" width="32" height="32" loading="lazy" />
-          <span>JDO</span>
-        </li>
-        <li title="DataNucleus">
-          <img src="assets/tech/datanucleus.png" alt="DataNucleus" width="32" height="32" loading="lazy" />
-          <span>DataNucleus</span>
-        </li>
-        <li title="JDBC">
-          <img src="assets/tech/jdbc.png" alt="JDBC" width="32" height="32" loading="lazy" />
-          <span>JDBC</span>
-        </li>
-        <li title="EclipseLink / JPA">
-          <img src="assets/tech/eclipse.svg" alt="EclipseLink" width="32" height="32" loading="lazy" />
-          <span>EclipseLink</span>
-        </li>
-        <li title="Apache Drools">
-          <img src="assets/tech/drools.png" alt="Apache Drools" width="32" height="32" loading="lazy" />
-          <span>Drools</span>
-        </li>
-        <li title="Apache Camel">
-          <img src="assets/tech/camel.png" alt="Camel" width="32" height="32" loading="lazy" />
-          <span>Camel</span>
-        </li>
-        <li title="Vaadin">
-          <img src="assets/tech/vaadin.svg" alt="Vaadin" width="32" height="32" loading="lazy" />
-          <span>Vaadin</span>
-        </li>
-        <li title="Apache Karaf / OSGi">
-          <img src="assets/tech/apache.svg" alt="OSGi / Karaf" width="32" height="32" loading="lazy" />
-          <span>OSGi / Karaf</span>
-        </li>
-        <li title="Spring Dynamic Modules">
-          <img src="assets/tech/spring-dm.svg" alt="Spring Dynamic Modules" width="32" height="32" loading="lazy" />
-          <span>Spring DM</span>
-        </li>
-        <li title="Blueprint">
-          <img src="assets/tech/blueprint.svg" alt="Blueprint" width="32" height="32" loading="lazy" />
-          <span>Blueprint</span>
-        </li>
-        <li title="OAuth 2.0">
-          <img src="assets/tech/oauth.svg" alt="OAuth 2.0" width="32" height="32" loading="lazy" />
-          <span>OAuth 2.0</span>
-        </li>
-        <li title="REST / OpenAPI">
-          <img src="assets/tech/rest.svg" alt="REST" width="32" height="32" loading="lazy" />
-          <span>REST</span>
-        </li>
-        <li title="SOAP">
-          <img src="assets/tech/soap.svg" alt="SOAP" width="32" height="32" loading="lazy" />
-          <span>SOAP</span>
-        </li>
-        <li title="WebSocket">
-          <img src="assets/tech/websocket.svg" alt="WebSocket" width="32" height="32" loading="lazy" />
-          <span>WebSocket</span>
-        </li>
-        <li title="Git">
-          <img src="assets/tech/git.svg" alt="Git" width="32" height="32" loading="lazy" />
-          <span>Git</span>
-        </li>
-        <li title="Apache Maven">
-          <img src="assets/tech/maven.svg" alt="Maven" width="32" height="32" loading="lazy" />
-          <span>Maven</span>
-        </li>
-        <li title="Gradle">
-          <img src="assets/tech/gradle.svg" alt="Gradle" width="32" height="32" loading="lazy" />
-          <span>Gradle</span>
-        </li>
-        <li title="Vagrant">
-          <img src="assets/tech/vagrant.svg" alt="Vagrant" width="32" height="32" loading="lazy" />
-          <span>Vagrant</span>
-        </li>
-        <li title="Tibco">
-          <img class="tech-logo--dark" src="assets/tech/tibco.png" alt="Tibco" width="32" height="32" loading="lazy" />
-          <span>Tibco</span>
-        </li>
-      </ul>
+
+      <div class="tech-groups reveal">
+        <section class="tech-group">
+          <h3>Языки</h3>
+          <ul class="tech-icons">
+            <li title="Java"><img src="assets/tech/java.svg" alt="Java" width="32" height="32" loading="lazy" /><span>Java</span></li>
+            <li title="Kotlin"><img src="assets/tech/kotlin.svg" alt="Kotlin" width="32" height="32" loading="lazy" /><span>Kotlin</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Фреймворки и DI</h3>
+          <ul class="tech-icons">
+            <li title="Spring"><img src="assets/tech/spring.svg" alt="Spring" width="32" height="32" loading="lazy" /><span>Spring</span></li>
+            <li title="Quarkus"><img src="assets/tech/quarkus.svg" alt="Quarkus" width="32" height="32" loading="lazy" /><span>Quarkus</span></li>
+            <li title="Micronaut"><img src="assets/tech/micronaut.png" alt="Micronaut" width="32" height="32" loading="lazy" /><span>Micronaut</span></li>
+            <li title="Google Guice"><img src="assets/tech/guice.svg" alt="Guice" width="32" height="32" loading="lazy" /><span>Guice</span></li>
+            <li title="Spring Dynamic Modules"><img src="assets/tech/spring-dm.svg" alt="Spring Dynamic Modules" width="32" height="32" loading="lazy" /><span>Spring DM</span></li>
+            <li title="Blueprint"><img src="assets/tech/blueprint.svg" alt="Blueprint" width="32" height="32" loading="lazy" /><span>Blueprint</span></li>
+            <li title="Apache Karaf / OSGi"><img src="assets/tech/apache.svg" alt="OSGi / Karaf" width="32" height="32" loading="lazy" /><span>OSGi / Karaf</span></li>
+            <li title="Vaadin"><img src="assets/tech/vaadin.svg" alt="Vaadin" width="32" height="32" loading="lazy" /><span>Vaadin</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Базы данных и ORM</h3>
+          <ul class="tech-icons">
+            <li title="Hibernate"><img src="assets/tech/hibernate.svg" alt="Hibernate" width="32" height="32" loading="lazy" /><span>Hibernate</span></li>
+            <li title="PostgreSQL"><img src="assets/tech/postgresql.svg" alt="PostgreSQL" width="32" height="32" loading="lazy" /><span>PostgreSQL</span></li>
+            <li title="Oracle"><img src="assets/tech/oracle.svg" alt="Oracle" width="32" height="32" loading="lazy" /><span>Oracle</span></li>
+            <li title="Microsoft SQL Server"><img src="assets/tech/mssql.svg" alt="MS SQL" width="32" height="32" loading="lazy" /><span>MS SQL</span></li>
+            <li title="MyBatis"><img class="tech-logo--dark" src="assets/tech/mybatis.png" alt="MyBatis" width="32" height="32" loading="lazy" /><span>MyBatis</span></li>
+            <li title="JDO"><img src="assets/tech/jdo.png" alt="JDO" width="32" height="32" loading="lazy" /><span>JDO</span></li>
+            <li title="DataNucleus"><img src="assets/tech/datanucleus.png" alt="DataNucleus" width="32" height="32" loading="lazy" /><span>DataNucleus</span></li>
+            <li title="JDBC"><img src="assets/tech/jdbc.png" alt="JDBC" width="32" height="32" loading="lazy" /><span>JDBC</span></li>
+            <li title="EclipseLink / JPA"><img src="assets/tech/eclipse.svg" alt="EclipseLink" width="32" height="32" loading="lazy" /><span>EclipseLink</span></li>
+            <li title="Redis"><img src="assets/tech/redis.svg" alt="Redis" width="32" height="32" loading="lazy" /><span>Redis</span></li>
+            <li title="Hazelcast"><img src="assets/tech/hazelcast.svg" alt="Hazelcast" width="32" height="32" loading="lazy" /><span>Hazelcast</span></li>
+            <li title="Elasticsearch"><img src="assets/tech/elasticsearch.svg" alt="Elasticsearch" width="32" height="32" loading="lazy" /><span>Elasticsearch</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Очереди и messaging</h3>
+          <ul class="tech-icons">
+            <li title="Apache Kafka"><img src="assets/tech/kafka.svg" alt="Kafka" width="32" height="32" loading="lazy" /><span>Kafka</span></li>
+            <li title="RabbitMQ"><img src="assets/tech/rabbitmq.svg" alt="RabbitMQ" width="32" height="32" loading="lazy" /><span>RabbitMQ</span></li>
+            <li title="Apache ActiveMQ"><img src="assets/tech/activemq.png" alt="ActiveMQ" width="32" height="32" loading="lazy" /><span>ActiveMQ</span></li>
+            <li title="OpenMQ"><img src="assets/tech/openmq.svg" alt="OpenMQ" width="32" height="32" loading="lazy" /><span>OpenMQ</span></li>
+            <li title="JMS"><img src="assets/tech/jms.png" alt="JMS" width="32" height="32" loading="lazy" /><span>JMS</span></li>
+            <li title="Tibco"><img class="tech-logo--dark" src="assets/tech/tibco.png" alt="Tibco" width="32" height="32" loading="lazy" /><span>Tibco</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>API и интеграции</h3>
+          <ul class="tech-icons">
+            <li title="REST / OpenAPI"><img src="assets/tech/rest.svg" alt="REST" width="32" height="32" loading="lazy" /><span>REST</span></li>
+            <li title="SOAP"><img src="assets/tech/soap.svg" alt="SOAP" width="32" height="32" loading="lazy" /><span>SOAP</span></li>
+            <li title="WebSocket"><img src="assets/tech/websocket.svg" alt="WebSocket" width="32" height="32" loading="lazy" /><span>WebSocket</span></li>
+            <li title="OAuth 2.0"><img src="assets/tech/oauth.svg" alt="OAuth 2.0" width="32" height="32" loading="lazy" /><span>OAuth 2.0</span></li>
+            <li title="Apache Camel"><img src="assets/tech/camel.png" alt="Camel" width="32" height="32" loading="lazy" /><span>Camel</span></li>
+            <li title="Apache Drools"><img src="assets/tech/drools.png" alt="Apache Drools" width="32" height="32" loading="lazy" /><span>Drools</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Инфраструктура и DevOps</h3>
+          <ul class="tech-icons">
+            <li title="Docker"><img src="assets/tech/docker.svg" alt="Docker" width="32" height="32" loading="lazy" /><span>Docker</span></li>
+            <li title="Kubernetes"><img src="assets/tech/kubernetes.svg" alt="Kubernetes" width="32" height="32" loading="lazy" /><span>Kubernetes</span></li>
+            <li title="Helm"><img src="assets/tech/helm.svg" alt="Helm" width="32" height="32" loading="lazy" /><span>Helm</span></li>
+            <li title="Argo CD"><img src="assets/tech/argocd.svg" alt="Argo CD" width="32" height="32" loading="lazy" /><span>Argo CD</span></li>
+            <li title="HashiCorp Vault"><img src="assets/tech/vault.svg" alt="Vault" width="32" height="32" loading="lazy" /><span>Vault</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Мониторинг и визуализация</h3>
+          <ul class="tech-icons">
+            <li title="Grafana"><img src="assets/tech/grafana.svg" alt="Grafana" width="32" height="32" loading="lazy" /><span>Grafana</span></li>
+            <li title="Kibana"><img src="assets/tech/kibana.svg" alt="Kibana" width="32" height="32" loading="lazy" /><span>Kibana</span></li>
+          </ul>
+        </section>
+
+        <section class="tech-group">
+          <h3>Инструменты и delivery</h3>
+          <ul class="tech-icons">
+            <li title="Git"><img src="assets/tech/git.svg" alt="Git" width="32" height="32" loading="lazy" /><span>Git</span></li>
+            <li title="Apache Maven"><img src="assets/tech/maven.svg" alt="Maven" width="32" height="32" loading="lazy" /><span>Maven</span></li>
+            <li title="Gradle"><img src="assets/tech/gradle.svg" alt="Gradle" width="32" height="32" loading="lazy" /><span>Gradle</span></li>
+            <li title="Vagrant"><img src="assets/tech/vagrant.svg" alt="Vagrant" width="32" height="32" loading="lazy" /><span>Vagrant</span></li>
+          </ul>
+        </section>
+      </div>
     </section>
   </main>
 

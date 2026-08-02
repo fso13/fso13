@@ -793,6 +793,21 @@ img {
   background: var(--section-alt);
 }
 
+.tech-groups {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.tech-group h3 {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .tech-icons {
   list-style: none;
   margin: 0;
