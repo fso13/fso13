@@ -71,8 +71,10 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 - Разработка платформы интеграции с платёжными системами
 - Серверная система для мобильного приложения коллекторского бюро
 - Разработка интеграций на основе технологии OSGi
+- Разработка интеграции с Яндекс Такси
+- Разработка системы предотвращения нелегальных поездок таксистов
 
-**Стек:** Java 8, Spring, EclipseLink, MyBatis, PostgreSQL, Oracle, MS SQL, Vaadin, OSGi / Karaf, Camel
+**Стек:** Java 8, Spring, Spring Dynamic Modules, Blueprint, EclipseLink, JDO, DataNucleus, MyBatis, JDBC, PostgreSQL, Oracle, MS SQL, Apache Drools, SOAP, JMS, WebSocket, ActiveMQ, OpenMQ, Vaadin, OSGi / Karaf, Camel
 
 ---
 
@@ -113,4 +115,4 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 
 ## Технологии и стек
 
-Java · Kotlin · Spring · Hibernate · PostgreSQL · Oracle · MS SQL · Kafka · RabbitMQ · ActiveMQ · MyBatis · EclipseLink · Camel · Vaadin · OSGi / Karaf · OAuth 2.0 · REST · SOAP · WebSocket · Git · Maven · Gradle · Vagrant · Tibco
+Java · Kotlin · Spring · Hibernate · PostgreSQL · Oracle · MS SQL · Kafka · RabbitMQ · ActiveMQ · OpenMQ · JMS · MyBatis · JDO · DataNucleus · JDBC · EclipseLink · Drools · Camel · Vaadin · OSGi / Karaf · Spring DM · Blueprint · OAuth 2.0 · REST · SOAP · WebSocket · Git · Maven · Gradle · Vagrant · Tibco

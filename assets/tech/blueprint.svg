@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Blueprint">
+  <rect width="32" height="32" rx="6" fill="#1A5276"/>
+  <path fill="none" stroke="#85C1E9" stroke-width="1.4" d="M8 10h16M8 16h16M8 22h10"/>
+  <circle cx="22" cy="22" r="3" fill="#F4D03F"/>
+</svg>
