@@ -611,11 +611,43 @@ img {
   color: var(--muted);
 }
 
-.section-metrics img {
-  width: min(480px, 100%);
+.metrics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+.metrics-card {
+  margin: 0;
+}
+
+.metrics-card figcaption {
+  margin-bottom: 0.55rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metrics-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.metrics-card img {
+  width: 100%;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg-elevated);
+}
+
+@media (max-width: 720px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contacts {
