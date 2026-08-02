@@ -56,6 +56,9 @@
 
 Backend-разработка на Spring-стеке: REST, messaging, интеграции.
 
+- Реализация нового функционала для собственного продукта SSO
+- Участие в разработке системы ДБО
+
 **Стек:** Java 8, Spring 5, Hibernate, PostgreSQL, REST, WebSocket, ActiveMQ, SOAP, Vagrant
 
 ---
@@ -67,6 +70,7 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 - Поддержка и разработка платформы рассылки SMS, голосовых сообщений и писем
 - Разработка платформы интеграции с платёжными системами
 - Серверная система для мобильного приложения коллекторского бюро
+- Разработка интеграций на основе технологии OSGi
 
 **Стек:** Java 8, Spring, EclipseLink, MyBatis, PostgreSQL, Oracle, MS SQL, Vaadin, OSGi / Karaf, Camel
 
@@ -95,8 +99,8 @@ Backend-разработка на Spring-стеке: REST, messaging, интег
 
 ## GitHub
 
-[![Top languages](./assets/github/top-langs.svg)](https://github.com/fso13)
-[![GitHub trophies](./assets/github/trophies.svg)](https://github.com/fso13)
+[![Top languages](./assets/github/top-langs-dark.svg)](https://github.com/fso13)
+[![GitHub trophies](./assets/github/trophies-dark.svg)](https://github.com/fso13)
 
 ---
 
